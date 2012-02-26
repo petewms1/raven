@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  year: 
+  num_tracks: 1
+  num_disks: 1
+  artwork: MyString
+  rating: 1
+  genre: MyString
+  comments: MyString
+
+two:
+  name: MyString
+  year: 
+  num_tracks: 1
+  num_disks: 1
+  artwork: MyString
+  rating: 1
+  genre: MyString
+  comments: MyString

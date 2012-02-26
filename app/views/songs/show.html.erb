@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @song.name %>
+</p>
+
+<p>
+  <b>Kind:</b>
+  <%= @song.kind %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @song.format %>
+</p>
+
+<p>
+  <b>Channels:</b>
+  <%= @song.channels %>
+</p>
+
+<p>
+  <b>Bit rate:</b>
+  <%= @song.bit_rate %>
+</p>
+
+<p>
+  <b>Encoder:</b>
+  <%= @song.encoder %>
+</p>
+
+<p>
+  <b>Sample rate:</b>
+  <%= @song.sample_rate %>
+</p>
+
+<p>
+  <b>Date modified:</b>
+  <%= @song.date_modified %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @song.length %>
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @album.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @album.year %>
+</p>
+
+<p>
+  <b>Num tracks:</b>
+  <%= @album.num_tracks %>
+</p>
+
+<p>
+  <b>Num disks:</b>
+  <%= @album.num_disks %>
+</p>
+
+<p>
+  <b>Artwork:</b>
+  <%= @album.artwork %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @album.rating %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @album.genre %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @album.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

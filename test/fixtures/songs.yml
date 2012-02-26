@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  kind: MyString
+  format: MyString
+  channels: MyString
+  bit_rate: MyString
+  encoder: MyString
+  sample_rate: MyString
+  date_modified: 2012-02-14
+  length: 1
+
+two:
+  name: MyString
+  kind: MyString
+  format: MyString
+  channels: MyString
+  bit_rate: MyString
+  encoder: MyString
+  sample_rate: MyString
+  date_modified: 2012-02-14
+  length: 1
