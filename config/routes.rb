@@ -1,4 +1,8 @@
 Raven::Application.routes.draw do
+
+  get "pages/home"
+  get "pages/contact"
+
   devise_for :users do
     get "/logout" => "devise/sessions#destroy"
     get "/login" => "devise/sessions#new"
@@ -7,16 +11,15 @@ Raven::Application.routes.draw do
   end
 
   resources :artists
-
   resources :playlists
-
   resources :albums
-
   resources :songs
+
+  root :to => 'songs#index'
+end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'songs#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -70,4 +73,4 @@ Raven::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
+#end
