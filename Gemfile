@@ -21,16 +21,32 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-    gem 'rspec-rails'
-end
-
-group :test do
-    gem 'rspec'
-    gem 'capybara'
-end
-
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'growl'
+  gem 'awesome_print'
+  gem 'railroady'
+  gem 'test-unit',          '~> 2.4.3',  :platform => :mri_19, :require => false
+  gem 'rspec-rails',        '~> 2.8.0'
+  gem 'factory_girl'
+  gem 'factory_girl_rails', '~> 1.6.0'
+  gem 'thin'
+  gem 'guard'             # https://github.com/guard/guard
+  gem 'guard-rails'       # https://github.com/guard/guard-rails
+  gem 'guard-sass'        # https://github.com/guard/guard-sass
+  gem 'guard-spork'       # https://github.com/guard/guard-spork
+  gem 'guard-rspec'       # https://github.com/guard/guard-rspec
+  gem 'guard-livereload'  # https://github.com/guard/guard-livereload
+  gem 'ruby_gntp'
+  gem 'yajl-ruby'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'spork'
+  gem 'simplecov', :platform => :mri_19 unless ENV["CI"]  # Until Travis supports build artifacts
+  gem 'fuubar'
+  gem 'annotate', '~> 2.4.1.beta', :require => false, :group => :development
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

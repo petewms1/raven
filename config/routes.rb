@@ -1,19 +1,23 @@
-Raven::Application.routes.draw do
+  Raven::Application.routes.draw do
 
   get "pages/home"
   get "pages/contact"
-
-  devise_for :users do
-    get "/logout" => "devise/sessions#destroy"
-    get "/login" => "devise/sessions#new"
-    get "/users/sign_out" => "devise/sessions#destroy"
-    get '/signup' => 'devise/registrations#new'
-  end
+  get "pages/about"
+ 
+ devise_for :users
+  #devise_scope :user do
+    #get "/login" => "devise/sessions#new"
+    #get "/logout" => "devise/sessions#destroy"
+    #delete "/logout" => "devise/sessions#destroy"
+    #get "/users/sign_out" => "devise/sessions#destroy"
+    #get '/signup' => 'devise/registrations#new'
+  #end
 
   resources :artists
   resources :playlists
   resources :albums
   resources :songs
+  #resources :pages
 
   root :to => 'songs#index'
 end
