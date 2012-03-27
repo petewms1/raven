@@ -1,5 +1,7 @@
   Raven::Application.routes.draw do
 
+  resources :tongs
+
   get "pages/home"
   get "pages/contact"
   get "pages/about"

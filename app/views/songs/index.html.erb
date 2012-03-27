@@ -1,39 +1,30 @@
-<h1>Listing songs</h1>
-
-<table>
+<h1>Songs</h1>
+<table class="table table-striped">
+ <thead>
   <tr>
-    <th>Name</th>
-    <th>Kind</th>
-    <th>Format</th>
-    <th>Channels</th>
-    <th>Bit rate</th>
-    <th>Encoder</th>
-    <th>Sample rate</th>
-    <th>Date modified</th>
-    <th>Length</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>ID</th>
+        <th>
+      <%= t("activerecord.attributes.song.name", :default => t("activerecord.labels.name", :default => "Name")) %>
+    </th>
+        <th>Created at</th>
+    <th>Actions</th>
   </tr>
-
-<% @songs.each do |song| %>
-  <tr>
-    <td><%= song.name %></td>
-    <td><%= song.kind %></td>
-    <td><%= song.format %></td>
-    <td><%= song.channels %></td>
-    <td><%= song.bit_rate %></td>
-    <td><%= song.encoder %></td>
-    <td><%= song.sample_rate %></td>
-    <td><%= song.date_modified %></td>
-    <td><%= song.length %></td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  </thead>
+  <tbody>
+  <% @songs.each do |song| -%>
+   <tr>
+    <td><%= song.id %></td>
+        <td><%= link_to song.name, song_path(song) %>
+    </td>
+        <td><%= song.created_at %></td>
+    <td>
+      <%= link_to "Show", song_path(song) %>
+      <%= link_to "Edit", edit_song_path(song) %>
+      <%= link_to "Destroy", song_path(song), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+    </td>
+    </tr>
+    <% end -%>
+   </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Song', new_song_path %>
+<%= link_to "New", new_song_path, :class => 'btn btn-primary' %>

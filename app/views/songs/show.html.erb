@@ -1,50 +1,33 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @song.name %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.name", :default => t("activerecord.labels.name", :default => "Name")) %>:</label>
+<p><%= @song.name %></p>
 
-<p>
-  <b>Kind:</b>
-  <%= @song.kind %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.kind", :default => t("activerecord.labels.kind", :default => "Kind")) %>:</label>
+<p><%= @song.kind %></p>
 
-<p>
-  <b>Format:</b>
-  <%= @song.format %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.format", :default => t("activerecord.labels.format", :default => "Format")) %>:</label>
+<p><%= @song.format %></p>
 
-<p>
-  <b>Channels:</b>
-  <%= @song.channels %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.channels", :default => t("activerecord.labels.channels", :default => "Channels")) %>:</label>
+<p><%= @song.channels %></p>
 
-<p>
-  <b>Bit rate:</b>
-  <%= @song.bit_rate %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.bit_rate", :default => t("activerecord.labels.bit_rate", :default => "Bit rate")) %>:</label>
+<p><%= @song.bit_rate %></p>
 
-<p>
-  <b>Encoder:</b>
-  <%= @song.encoder %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.encoder", :default => t("activerecord.labels.encoder", :default => "Encoder")) %>:</label>
+<p><%= @song.encoder %></p>
 
-<p>
-  <b>Sample rate:</b>
-  <%= @song.sample_rate %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.sample_rate", :default => t("activerecord.labels.sample_rate", :default => "Sample rate")) %>:</label>
+<p><%= @song.sample_rate %></p>
 
-<p>
-  <b>Date modified:</b>
-  <%= @song.date_modified %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.date_modified", :default => t("activerecord.labels.date_modified", :default => "Date modified")) %>:</label>
+<p><%= @song.date_modified %></p>
 
-<p>
-  <b>Length:</b>
-  <%= @song.length %>
-</p>
+<label class="label"><%= t("activerecord.attributes.song.length", :default => t("activerecord.labels.length", :default => "Length")) %>:</label>
+<p><%= @song.length %></p>
 
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+<div class="form-actions">
+<%= link_to "Back", songs_path, :class => 'btn'  %>
+<%= link_to "Edit", edit_song_path(@song), :class => 'btn' %>
+<%= link_to "Delete", song_path(@song), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn' %>
+</div>

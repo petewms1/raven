@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require twitter/bootstrap
+ *= require bootstrap_and_overrides
 */
 ul.hmenu {
   list-style: none;	

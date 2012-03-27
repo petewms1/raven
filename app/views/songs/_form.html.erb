@@ -1,53 +1,67 @@
-<%= form_for(@song) do |f| %>
-  <% if @song.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
 
-      <ul>
-      <% @song.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="clearfix">
+   <%= f.label :name, t("activerecord.attributes.song.name", :default => "Name"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :name, :class => 'text_field' %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+<div class="clearfix">
+   <%= f.label :kind, t("activerecord.attributes.song.kind", :default => "Kind"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :kind, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :kind %><br />
-    <%= f.text_field :kind %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :format, t("activerecord.attributes.song.format", :default => "Format"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :format, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :format %><br />
-    <%= f.text_field :format %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :channels, t("activerecord.attributes.song.channels", :default => "Channels"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :channels, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :channels %><br />
-    <%= f.text_field :channels %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :bit_rate, t("activerecord.attributes.song.bit_rate", :default => "Bit rate"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :bit_rate, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :bit_rate %><br />
-    <%= f.text_field :bit_rate %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :encoder, t("activerecord.attributes.song.encoder", :default => "Encoder"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :encoder, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :encoder %><br />
-    <%= f.text_field :encoder %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :sample_rate, t("activerecord.attributes.song.sample_rate", :default => "Sample rate"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :sample_rate, :class => 'text_field' %>
   </div>
-  <div class="field">
-    <%= f.label :sample_rate %><br />
-    <%= f.text_field :sample_rate %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :date_modified, t("activerecord.attributes.song.date_modified", :default => "Date modified"), :class => :label %>
+  <div class="input">
+    <%= f.date_select :date_modified, :class => 'date_select' %>
   </div>
-  <div class="field">
-    <%= f.label :date_modified %><br />
-    <%= f.date_select :date_modified %>
+</div>
+
+<div class="clearfix">
+   <%= f.label :length, t("activerecord.attributes.song.length", :default => "Length"), :class => :label %>
+  <div class="input">
+    <%= f.number_field :length, :class => 'number_field' %>
   </div>
-  <div class="field">
-    <%= f.label :length %><br />
-    <%= f.number_field :length %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
+<div class="form-actions">
+  <button class="btn primary" type="submit">Save</button> or
+	<%= link_to "Cancel", songs_path %>
+</div>

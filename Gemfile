@@ -7,12 +7,12 @@ gem 'rails', '3.2.1'
 
 gem 'mysql2'
 gem 'devise'
-gem 'haml'
+#gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'less-rails-bootstrap'
+  gem 'twitter-bootstrap-rails', '2.0.2'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

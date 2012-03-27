@@ -1,6 +1,4 @@
-<h1>Editing song</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @song %> |
-<%= link_to 'Back', songs_path %>
+<%= form_for @song, :url => song_path(@song), :html => { :class => "edit_song", :id => "edit_song" } do |f| -%>
+  <input name="_method" type="hidden" value="put" />
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>
