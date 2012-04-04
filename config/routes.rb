@@ -1,12 +1,10 @@
   Raven::Application.routes.draw do
 
-  resources :tongs
-
   get "pages/home"
   get "pages/contact"
   get "pages/about"
- 
- devise_for :users
+
+  devise_for :users
   #devise_scope :user do
     #get "/login" => "devise/sessions#new"
     #get "/logout" => "devise/sessions#destroy"
